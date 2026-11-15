@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Lexend } from "next/font/google";
 
 import { Providers } from "@/components/Providers";
+import { siteUrl } from "@/config/env";
 import pt from "@/i18n/locales/pt.json";
 
 import "./globals.css";
@@ -12,13 +13,14 @@ const lexend = Lexend({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 const title = "NEBe · Núcleo de Estudantes de Bioengenharia da UAlg";
 const description =
   "Núcleo de Estudantes de Bioengenharia da Universidade do Algarve. A vida inspira e a engenharia transforma.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  // Só a origem: o Next.js já acrescenta o basePath aos URLs das imagens.
+  metadataBase: new URL(new URL(siteUrl).origin),
+  alternates: { canonical: `${siteUrl}/` },
   title,
   description,
   keywords: [
