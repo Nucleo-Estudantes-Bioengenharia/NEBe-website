@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
 test("abre em português por defeito", async ({ page }) => {
   await expect(page.locator("html")).toHaveAttribute("lang", "pt-PT");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "A vida inspira e",
+    "A vida inspira,",
   );
 });
 
