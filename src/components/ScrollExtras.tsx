@@ -27,16 +27,30 @@ export function BackToTop() {
   const { t } = useTranslation();
   const [visible, setVisible] = useState(false);
 
+  const [footerVisible, setFooterVisible] = useState(false);
+
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 700);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+
+    // O rodapé já tem o seu link "voltar ao topo": aí o botão flutuante esconde-se
+    // para não tapar o texto.
+    const footer = document.getElementById("rodape");
+    const observer = new IntersectionObserver(([entry]) =>
+      setFooterVisible(entry.isIntersecting),
+    );
+    if (footer) observer.observe(footer);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
     <AnimatePresence>
-      {visible && (
+      {visible && !footerVisible && (
         <motion.a
           href="#inicio"
           aria-label={t("footer.backToTop")}

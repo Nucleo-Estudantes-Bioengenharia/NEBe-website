@@ -30,15 +30,15 @@ export function Footer() {
   const year = useCurrentYear();
 
   return (
-    <footer className="relative bg-surface">
+    <footer id="rodape" className="relative bg-surface">
       <div
         className="h-1 bg-gradient-to-r from-mint via-accent to-primary"
         aria-hidden
       />
-      <Reveal className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)] lg:px-8">
-        <div className="sm:col-span-2 lg:col-span-1">
+      <Reveal className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-10 px-4 py-12 sm:px-6 sm:py-14 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)] lg:px-8">
+        <div className="col-span-2 flex flex-col items-center text-center sm:items-start sm:text-left lg:col-span-1">
           <Logo className="h-14 shadow-sm" />
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-pretty text-muted">
             {t("footer.description")}
           </p>
         </div>
@@ -64,27 +64,31 @@ export function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm">
             <li>
               <ExternalLink href={siteConfig.instagram} className={linkClass}>
-                <InstagramIcon className="size-4" aria-hidden /> Instagram
+                <InstagramIcon className="size-4 shrink-0" aria-hidden />{" "}
+                Instagram
               </ExternalLink>
             </li>
             <li>
               <ExternalLink href={siteConfig.linkedin} className={linkClass}>
-                <LinkedinIcon className="size-4" aria-hidden /> LinkedIn
+                <LinkedinIcon className="size-4 shrink-0" aria-hidden />{" "}
+                LinkedIn
               </ExternalLink>
             </li>
           </ul>
         </div>
       </Reveal>
       <div className="border-t border-line">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 pb-[calc(1.5rem+env(safe-area-inset-bottom))] text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <p className="text-pretty">
-            © {year ? `${year} ` : ""}
-            {siteConfig.shortName} · AAUAlg. {t("footer.rights")}{" "}
-            <span className="whitespace-nowrap">{t("footer.made")}</span>
-          </p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 pt-6 pb-[calc(1.5rem+env(safe-area-inset-bottom))] text-center text-xs text-muted sm:px-6 md:flex-row md:justify-between md:text-left lg:px-8">
+          <div className="space-y-1">
+            <p>
+              © {year ? `${year} ` : ""}
+              {siteConfig.shortName} · AAUAlg. {t("footer.rights")}
+            </p>
+            <p>{t("footer.made")}</p>
+          </div>
           <a
             href="#inicio"
-            className="group inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap hover:text-primary"
+            className="group inline-flex shrink-0 items-center gap-1.5 rounded-full border border-line px-4 py-2 whitespace-nowrap transition-colors hover:border-primary hover:text-primary"
           >
             {t("footer.backToTop")}
             <ArrowUp
