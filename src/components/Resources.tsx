@@ -5,8 +5,9 @@ import { useTranslation } from "react-i18next";
 
 import { resources } from "@/config/site";
 
-import { SectionHeading } from "./SectionHeading";
 import { ExternalLink } from "./ExternalLink";
+import { StaggerItem, StaggerList, trackSpotlight } from "./motion";
+import { SectionHeading } from "./SectionHeading";
 
 export function Resources() {
   const { t } = useTranslation();
@@ -15,7 +16,7 @@ export function Resources() {
     <section
       id="recursos"
       aria-labelledby="recursos-title"
-      className="bg-surface-soft py-20 sm:py-28"
+      className="py-20 sm:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
@@ -24,21 +25,22 @@ export function Resources() {
           title={t("resources.title")}
           intro={t("resources.intro")}
         />
-        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerList className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {resources.map(({ key, icon: Icon, href }) => (
-            <li key={key}>
+            <StaggerItem key={key}>
               <ExternalLink
                 href={href}
-                className="group flex h-full gap-4 rounded-3xl border border-line bg-surface p-6 transition-all hover:border-accent hover:shadow-lg focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
+                onMouseMove={trackSpotlight}
+                className="group spotlight flex h-full gap-4 rounded-3xl border border-line bg-surface p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-xl hover:shadow-[rgb(10_71_168/0.12)] focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none sm:p-6"
               >
-                <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-pill text-primary">
+                <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-pill text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-on-primary">
                   <Icon className="size-6" aria-hidden />
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="flex items-center justify-between gap-2 font-semibold text-ink">
                     {t(`resources.items.${key}.title`)}
                     <ArrowUpRight
-                      className="size-5 shrink-0 text-muted transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
+                      className="size-5 shrink-0 text-muted transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent"
                       aria-hidden
                     />
                   </span>
@@ -47,9 +49,9 @@ export function Resources() {
                   </span>
                 </span>
               </ExternalLink>
-            </li>
+            </StaggerItem>
           ))}
-        </ul>
+        </StaggerList>
       </div>
     </section>
   );
