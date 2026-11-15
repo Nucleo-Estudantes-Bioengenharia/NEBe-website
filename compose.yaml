@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_BASE_PATH: ${NEXT_PUBLIC_BASE_PATH:-}
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:8080}
+    image: nebe-website
+    container_name: nebe-website
+    ports:
+      - "${PORT:-8080}:80"
+    restart: unless-stopped
