@@ -8,7 +8,6 @@
   "nav": {
     "about": "About us",
     "activities": "Activities",
-    "agenda": "Agenda",
     "resources": "Resources",
     "join": "Join us",
     "openMenu": "Open menu",
@@ -22,8 +21,8 @@
   },
   "language": {
     "label": "Language",
-    "switchTo": "Switch to Portuguese",
-    "short": "PT"
+    "pt": "Português",
+    "en": "English"
   },
   "brand": {
     "name": "Bioengineering Students' Association",
@@ -37,7 +36,10 @@
     "ctaPrimary": "Join us",
     "ctaSecondary": "Meet the association",
     "tagline": "From the Algarve to the future",
-    "diagramTitle": "Fields of Bioengineering"
+    "diagramTitle": "Fields of Bioengineering",
+    "badge": "AAUAlg student association",
+    "scroll": "Scroll down to meet us",
+    "tapHint": "Tap an icon to explore the fields"
   },
   "areas": {
     "center": "Bioengineering",
@@ -124,46 +126,6 @@
       }
     }
   },
-  "agenda": {
-    "eyebrow": "Agenda",
-    "title": "Upcoming events",
-    "intro": "Save the date and come along! Most activities are free and open to the whole academic community.",
-    "note": "Dates are tentative — always check our social media for confirmation.",
-    "types": {
-      "workshop": "Workshop",
-      "social": "Social",
-      "study": "Study",
-      "talk": "Talk",
-      "conference": "Conference",
-      "visit": "Visit"
-    },
-    "events": {
-      "printing": {
-        "title": "3D Printing for Biomedicine",
-        "location": "Faculty of Sciences and Technology, Gambelas Campus"
-      },
-      "christmas": {
-        "title": "NEBe Christmas Dinner",
-        "location": "Faro"
-      },
-      "exams": {
-        "title": "Pre-exam study marathon",
-        "location": "Library, Gambelas Campus"
-      },
-      "careers": {
-        "title": "Careers in Bioengineering",
-        "location": "Lecture hall, Gambelas Teaching Complex"
-      },
-      "jornadas": {
-        "title": "Algarve Bioengineering Conference",
-        "location": "Gambelas Campus"
-      },
-      "visit": {
-        "title": "Visit to a biomedical research centre",
-        "location": "Algarve"
-      }
-    }
-  },
   "resources": {
     "eyebrow": "Resources",
     "title": "Everything you need, in one place",
@@ -220,5 +182,6 @@
     "rights": "All rights reserved.",
     "made": "Made with science and coffee in the Algarve.",
     "backToTop": "Back to top"
-  }
+  },
+  "marquee": "Fields of Bioengineering"
 }

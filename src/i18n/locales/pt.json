@@ -8,7 +8,6 @@
   "nav": {
     "about": "Sobre nós",
     "activities": "Atividades",
-    "agenda": "Agenda",
     "resources": "Recursos",
     "join": "Junta-te a nós",
     "openMenu": "Abrir menu",
@@ -22,8 +21,8 @@
   },
   "language": {
     "label": "Idioma",
-    "switchTo": "Mudar para inglês",
-    "short": "EN"
+    "pt": "Português",
+    "en": "English"
   },
   "brand": {
     "name": "Núcleo de Estudantes de Bioengenharia",
@@ -37,7 +36,10 @@
     "ctaPrimary": "Junta-te a nós",
     "ctaSecondary": "Conhece o núcleo",
     "tagline": "Do Algarve para o futuro",
-    "diagramTitle": "Áreas da Bioengenharia"
+    "diagramTitle": "Áreas da Bioengenharia",
+    "badge": "Núcleo da AAUAlg",
+    "scroll": "Descer para conhecer o núcleo",
+    "tapHint": "Toca num ícone para explorar as áreas"
   },
   "areas": {
     "center": "Bioengenharia",
@@ -124,46 +126,6 @@
       }
     }
   },
-  "agenda": {
-    "eyebrow": "Agenda",
-    "title": "Próximos eventos",
-    "intro": "Marca na tua agenda e aparece! A maioria das atividades é gratuita e aberta a toda a comunidade académica.",
-    "note": "Datas indicativas — confirma sempre nas nossas redes sociais.",
-    "types": {
-      "workshop": "Workshop",
-      "social": "Convívio",
-      "study": "Estudo",
-      "talk": "Palestra",
-      "conference": "Jornadas",
-      "visit": "Visita"
-    },
-    "events": {
-      "printing": {
-        "title": "Impressão 3D aplicada à Biomedicina",
-        "location": "FCT, Campus de Gambelas"
-      },
-      "christmas": {
-        "title": "Jantar de Natal NEBe",
-        "location": "Faro"
-      },
-      "exams": {
-        "title": "Maratona de estudo pré-exames",
-        "location": "Biblioteca, Campus de Gambelas"
-      },
-      "careers": {
-        "title": "Saídas profissionais em Bioengenharia",
-        "location": "Anfiteatro, Complexo Pedagógico de Gambelas"
-      },
-      "jornadas": {
-        "title": "Jornadas de Bioengenharia do Algarve",
-        "location": "Campus de Gambelas"
-      },
-      "visit": {
-        "title": "Visita a um centro de investigação biomédica",
-        "location": "Algarve"
-      }
-    }
-  },
   "resources": {
     "eyebrow": "Recursos",
     "title": "Tudo o que precisas, num só sítio",
@@ -220,5 +182,6 @@
     "rights": "Todos os direitos reservados.",
     "made": "Feito com ciência e café no Algarve.",
     "backToTop": "Voltar ao topo"
-  }
+  },
+  "marquee": "Áreas da Bioengenharia"
 }

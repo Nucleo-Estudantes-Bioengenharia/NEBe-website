@@ -14,13 +14,34 @@ test("abre em português por defeito", async ({ page }) => {
 test("muda para inglês e mantém a escolha depois de recarregar", async ({
   page,
 }) => {
-  await page.getByRole("button", { name: "Mudar para inglês" }).click();
+  await page.getByRole("button", { name: "Idioma: Português" }).click();
+  await page.getByRole("option", { name: "English" }).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  await expect(
+    page.getByRole("button", { name: "Language: English" }),
+  ).toBeVisible();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Life inspires",
   );
 
   await page.reload();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "Life inspires",
+  );
+});
+
+test("o dropdown de idiomas funciona com o teclado", async ({ page }) => {
+  const trigger = page.getByRole("button", { name: "Idioma: Português" });
+  await trigger.focus();
+  await page.keyboard.press("ArrowDown");
+  await expect(page.getByRole("listbox")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("listbox")).toBeHidden();
+  await expect(trigger).toBeFocused();
+
+  await page.keyboard.press("ArrowDown");
+  await page.keyboard.press("ArrowDown");
+  await page.keyboard.press("Enter");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Life inspires",
   );
@@ -58,7 +79,6 @@ test.describe("navegação", () => {
       heading: "Somos a voz dos estudantes de Bioengenharia da UAlg",
     },
     { link: "Atividades", heading: "Aprender, explorar e conviver" },
-    { link: "Agenda", heading: "Próximos eventos" },
     { link: "Recursos", heading: "Tudo o que precisas, num só sítio" },
   ];
 
