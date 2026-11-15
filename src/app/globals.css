@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* O modo escuro é controlado pela classe `.dark` no <html> (next-themes). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6fbff;
+  --surface: #ffffff;
+  --surface-soft: #e9f4fd;
+  --hero: #dcedfb;
+  --ink: #0a3d91;
+  --ink-strong: #072c6b;
+  --text: #1d3557;
+  --muted: #4e6788;
+  --primary: #0a47a8;
+  --accent: #23ade0;
+  --mint: #3ad79a;
+  --line: #c8def3;
+  --pill: #d3ebfc;
+  --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23b5d5f1' stroke-width='1.6' opacity='.75'%3E%3Ccircle cx='60' cy='60' r='9'/%3E%3Cpath d='M60 18c10 12 10 23 0 33c-10-10-10-21 0-33zM60 102c10-12 10-23 0-33c-10 10-10 21 0 33zM18 60c12-10 23-10 33 0c-10 10-21 10-33 0zM102 60c-12-10-23-10-33 0c10 10 21 10 33 0z'/%3E%3Cpath d='M0 20a20 20 0 0 0 20-20M100 0a20 20 0 0 0 20 20M120 100a20 20 0 0 0-20 20M20 120A20 20 0 0 0 0 100'/%3E%3Cpath d='M36 36l8 8M84 36l-8 8M36 84l8-8M84 84l-8-8' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #061327;
+  --surface: #0b1e3b;
+  --surface-soft: #0f2749;
+  --hero: #081a35;
+  --ink: #e4f1ff;
+  --ink-strong: #ffffff;
+  --text: #cfe0f5;
+  --muted: #8ea8c9;
+  --primary: #5fb4ff;
+  --accent: #3fd0f5;
+  --mint: #4ee6a8;
+  --line: #1c3a63;
+  --pill: #133a6b;
+  --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23163764' stroke-width='1.6'%3E%3Ccircle cx='60' cy='60' r='9'/%3E%3Cpath d='M60 18c10 12 10 23 0 33c-10-10-10-21 0-33zM60 102c10-12 10-23 0-33c-10 10-10 21 0 33zM18 60c12-10 23-10 33 0c-10 10-21 10-33 0zM102 60c-12-10-23-10-33 0c10 10 21 10 33 0z'/%3E%3Cpath d='M0 20a20 20 0 0 0 20-20M100 0a20 20 0 0 0 20 20M120 100a20 20 0 0 0-20 20M20 120A20 20 0 0 0 0 100'/%3E%3Cpath d='M36 36l8 8M84 36l-8 8M36 84l8-8M84 84l-8-8' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-hero: var(--hero);
+  --color-ink: var(--ink);
+  --color-ink-strong: var(--ink-strong);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-mint: var(--mint);
+  --color-line: var(--line);
+  --color-pill: var(--pill);
+  --font-sans: var(--font-lexend), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Padrão inspirado nos azulejos, usado no fundo da secção inicial. */
+.azulejo {
+  background-image: var(--pattern);
+  background-size: 120px 120px;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--mint),
+    var(--accent),
+    var(--primary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Compensa a navbar fixa quando se navega para uma secção. */
+section[id] {
+  scroll-margin-top: 5rem;
+}
