@@ -1,5 +1,6 @@
 "use client";
 
+import { MotionConfig } from "motion/react";
 import { ThemeProvider } from "next-themes";
 import { useEffect, type ReactNode } from "react";
 import { I18nextProvider } from "react-i18next";
@@ -41,7 +42,8 @@ export function Providers({ children }: { children: ReactNode }) {
     >
       <I18nextProvider i18n={i18n}>
         <LanguageSync />
-        {children}
+        {/* Respeita a preferência do sistema por menos animações. */}
+        <MotionConfig reducedMotion="user">{children}</MotionConfig>
       </I18nextProvider>
     </ThemeProvider>
   );
