@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "skip": "Skip to content"
+  },
+  "common": {
+    "newTab": "(opens in a new tab)"
+  },
+  "nav": {
+    "about": "About us",
+    "activities": "Activities",
+    "resources": "Resources",
+    "join": "Join us",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "home": "Go to top",
+    "primary": "Main navigation"
+  },
+  "theme": {
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode"
+  },
+  "language": {
+    "label": "Language",
+    "pt": "Português",
+    "en": "English"
+  },
+  "brand": {
+    "name": "Bioengineering Students' Association",
+    "university": "University of Algarve"
+  },
+  "hero": {
+    "line1": "Life inspires,",
+    "line2": "engineering",
+    "line3": "transforms.",
+    "subtitle": "We connect people, ideas and science to build what comes next!",
+    "ctaPrimary": "Join us",
+    "ctaSecondary": "Meet the association",
+    "tagline": "From the Algarve to the future",
+    "diagramTitle": "Fields of Bioengineering",
+    "scroll": "Scroll down to meet us",
+    "tapHint": "Tap an icon to explore the fields"
+  },
+  "areas": {
+    "center": "Bioengineering",
+    "health": "Health and Medicine",
+    "tissue": "Tissue Engineering and Regenerative Medicine",
+    "cellular": "Cell and Molecular Biology",
+    "materials": "Biomedical Materials",
+    "data": "Bioinformatics and Data",
+    "industry": "Industry and Innovation",
+    "food": "Food and Bioprocesses",
+    "environment": "Environment and Sustainability",
+    "biotech": "Biotechnology",
+    "biomechanics": "Biomechanics and Rehabilitation",
+    "signals": "Signal and Image Processing",
+    "devices": "Medical Devices and Technologies"
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "We are the voice of UAlg's Bioengineering students",
+    "p1": "NEBe — Núcleo de Estudantes de Bioengenharia is a student association within the Academic Association of the University of Algarve (AAUAlg). It represents and energises the students of the Bioengineering degree at the Faculty of Sciences and Technology, on the Gambelas Campus in Faro.",
+    "p2": "Bioengineering brings together biology, biotechnology and engineering to solve real problems — from new materials and medical devices to sustainable bioprocesses and marine-based products. We want every student to make the most of this journey, inside and outside the classroom.",
+    "pillarsTitle": "What drives us",
+    "pillars": {
+      "represent": {
+        "title": "Represent",
+        "text": "We speak up for students with the course board, the Faculty and AAUAlg."
+      },
+      "connect": {
+        "title": "Connect",
+        "text": "We build bridges with companies, research centres and alumni."
+      },
+      "learn": {
+        "title": "Train",
+        "text": "We run workshops and training that complement the curriculum."
+      },
+      "unite": {
+        "title": "Unite",
+        "text": "We turn the degree into a community, with socials, mentoring and mutual support."
+      }
+    },
+    "course": {
+      "title": "BSc in Bioengineering",
+      "subtitle": "Faculty of Sciences and Technology · UAlg",
+      "since": "Since",
+      "sinceValue": "2019/20",
+      "duration": "Duration",
+      "durationValue": "3 years",
+      "credits": "Credits",
+      "creditsValue": "180 ECTS",
+      "campus": "Campus",
+      "campusValue": "Gambelas, Faro",
+      "note": "Taught by the Faculty of Sciences and Technology together with the Department of Biomedical Sciences and Medicine and the School of Health.",
+      "link": "See the curriculum"
+    }
+  },
+  "activities": {
+    "eyebrow": "Activities",
+    "title": "Learn, explore and connect",
+    "intro": "Throughout the academic year we organise initiatives for every taste — from the lab bench to the main stage of our annual conference.",
+    "items": {
+      "workshops": {
+        "title": "Workshops and training",
+        "text": "Hands-on sessions on scientific programming, 3D modelling, lab techniques and soft skills."
+      },
+      "talks": {
+        "title": "Talks and discussions",
+        "text": "Conversations with researchers, professionals and alumni about careers and trends in the field."
+      },
+      "visits": {
+        "title": "Field trips",
+        "text": "Visits to companies, hospitals and research centres to see Bioengineering in action."
+      },
+      "conference": {
+        "title": "Bioengineering Conference",
+        "text": "Our flagship event: two days of talks, workshops and networking open to the whole university."
+      },
+      "mentoring": {
+        "title": "Mentoring and study support",
+        "text": "A peer mentoring programme across years, pre-exam study sessions and shared materials."
+      },
+      "social": {
+        "title": "Socials and sports",
+        "text": "Course dinners, tournaments and outings — because team spirit is also built outside class."
+      }
+    }
+  },
+  "resources": {
+    "eyebrow": "Resources",
+    "title": "Everything you need, in one place",
+    "intro": "A selection of useful links for your academic and professional path.",
+    "items": {
+      "course": {
+        "title": "Curriculum",
+        "text": "Course units, learning goals and career paths of the degree."
+      },
+      "ualg": {
+        "title": "University of Algarve",
+        "text": "UAlg's official portal: academic services, calendar and news."
+      },
+      "aaualg": {
+        "title": "AAUAlg",
+        "text": "The Academic Association representing every UAlg student."
+      },
+      "pubmed": {
+        "title": "PubMed",
+        "text": "The go-to database for biomedical and life sciences literature."
+      },
+      "bon": {
+        "title": "b-on",
+        "text": "Online Knowledge Library: access to scientific journals with your UAlg e-mail."
+      },
+      "oe": {
+        "title": "Ordem dos Engenheiros",
+        "text": "The Portuguese engineering council: the profession, internships and becoming a chartered engineer."
+      }
+    }
+  },
+  "join": {
+    "eyebrow": "Join us",
+    "title": "Become part of NEBe",
+    "text": "Studying Bioengineering at UAlg? This association is yours! Join our activities, pitch your ideas or become part of the team and help organise the next events.",
+    "benefits": {
+      "events": "Priority access to workshops and field trips",
+      "network": "Contact with researchers and companies",
+      "skills": "Experience in event management and teamwork",
+      "community": "A community that has your back throughout the degree"
+    },
+    "ctaEmail": "Send us an e-mail",
+    "ctaInstagram": "Follow us on Instagram",
+    "contactTitle": "Contacts",
+    "emailLabel": "E-mail",
+    "addressLabel": "Address",
+    "address": "AAUAlg · Gambelas Campus, 8005-139 Faro, Portugal",
+    "socialLabel": "Social media"
+  },
+  "footer": {
+    "description": "Bioengineering Students' Association of the Academic Association of the University of Algarve.",
+    "sections": "Sections",
+    "follow": "Follow us",
+    "rights": "All rights reserved.",
+    "made": "Made with science and coffee in the Algarve.",
+    "backToTop": "Back to top"
+  },
+  "marquee": "Fields of Bioengineering"
+}

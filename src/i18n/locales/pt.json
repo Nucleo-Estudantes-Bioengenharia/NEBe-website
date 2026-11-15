@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "skip": "Saltar para o conteúdo"
+  },
+  "common": {
+    "newTab": "(abre num novo separador)"
+  },
+  "nav": {
+    "about": "Sobre nós",
+    "activities": "Atividades",
+    "resources": "Recursos",
+    "join": "Junta-te a nós",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "home": "Ir para o início",
+    "primary": "Navegação principal"
+  },
+  "theme": {
+    "toLight": "Mudar para modo claro",
+    "toDark": "Mudar para modo escuro"
+  },
+  "language": {
+    "label": "Idioma",
+    "pt": "Português",
+    "en": "English"
+  },
+  "brand": {
+    "name": "Núcleo de Estudantes de Bioengenharia",
+    "university": "Universidade do Algarve"
+  },
+  "hero": {
+    "line1": "A vida inspira,",
+    "line2": "a engenharia",
+    "line3": "transforma.",
+    "subtitle": "Ligamos pessoas, ideias e ciência para criar o que vem a seguir!",
+    "ctaPrimary": "Junta-te a nós",
+    "ctaSecondary": "Conhece o núcleo",
+    "tagline": "Do Algarve para o futuro",
+    "diagramTitle": "Áreas da Bioengenharia",
+    "scroll": "Descer para conhecer o núcleo",
+    "tapHint": "Toca num ícone para explorar as áreas"
+  },
+  "areas": {
+    "center": "Bioengenharia",
+    "health": "Saúde e Medicina",
+    "tissue": "Engenharia de Tecidos e Medicina Regenerativa",
+    "cellular": "Biologia Celular e Molecular",
+    "materials": "Materiais Biomédicos",
+    "data": "Bioinformática e Dados",
+    "industry": "Indústria e Inovação",
+    "food": "Alimentação e Bioprocessos",
+    "environment": "Ambiente e Sustentabilidade",
+    "biotech": "Biotecnologia",
+    "biomechanics": "Biomecânica e Reabilitação",
+    "signals": "Processamento de Sinais e Imagem",
+    "devices": "Dispositivos e Tecnologias Médicas"
+  },
+  "about": {
+    "eyebrow": "Sobre nós",
+    "title": "Somos a voz dos estudantes de Bioengenharia da UAlg",
+    "p1": "O NEBe — Núcleo de Estudantes de Bioengenharia é um núcleo da Associação Académica da Universidade do Algarve (AAUAlg) que representa e dinamiza a comunidade de estudantes da licenciatura em Bioengenharia da Faculdade de Ciências e Tecnologia, no Campus de Gambelas, em Faro.",
+    "p2": "A Bioengenharia junta a biologia, a biotecnologia e a engenharia para resolver problemas reais — de novos materiais e dispositivos médicos a bioprocessos sustentáveis e produtos de origem marinha. Nós queremos que cada estudante aproveite ao máximo este percurso, dentro e fora da sala de aula.",
+    "pillarsTitle": "O que nos move",
+    "pillars": {
+      "represent": {
+        "title": "Representar",
+        "text": "Damos voz aos estudantes junto da direção de curso, da FCT e da AAUAlg."
+      },
+      "connect": {
+        "title": "Aproximar",
+        "text": "Criamos pontes com empresas, centros de investigação e antigos alunos."
+      },
+      "learn": {
+        "title": "Formar",
+        "text": "Promovemos workshops e formações que complementam o plano de estudos."
+      },
+      "unite": {
+        "title": "Integrar",
+        "text": "Fazemos do curso uma comunidade, com convívios, mentoria e apoio mútuo."
+      }
+    },
+    "course": {
+      "title": "Licenciatura em Bioengenharia",
+      "subtitle": "Faculdade de Ciências e Tecnologia · UAlg",
+      "since": "Desde",
+      "sinceValue": "2019/20",
+      "duration": "Duração",
+      "durationValue": "3 anos",
+      "credits": "Créditos",
+      "creditsValue": "180 ECTS",
+      "campus": "Campus",
+      "campusValue": "Gambelas, Faro",
+      "note": "Lecionada pela FCT em colaboração com o Departamento de Ciências Biomédicas e Medicina e a Escola Superior de Saúde.",
+      "link": "Ver plano de estudos"
+    }
+  },
+  "activities": {
+    "eyebrow": "Atividades",
+    "title": "Aprender, explorar e conviver",
+    "intro": "Ao longo do ano letivo organizamos iniciativas para todos os gostos — da bancada do laboratório ao palco das Jornadas.",
+    "items": {
+      "workshops": {
+        "title": "Workshops e formações",
+        "text": "Sessões práticas de programação científica, modelação 3D, técnicas laboratoriais e soft skills."
+      },
+      "talks": {
+        "title": "Palestras e tertúlias",
+        "text": "Conversas com investigadores, profissionais e ex-alunos sobre saídas profissionais e tendências da área."
+      },
+      "visits": {
+        "title": "Visitas de estudo",
+        "text": "Idas a empresas, hospitais e centros de investigação para ver a Bioengenharia em ação."
+      },
+      "conference": {
+        "title": "Jornadas de Bioengenharia",
+        "text": "O nosso evento anual: dois dias de palestras, workshops e networking abertos a toda a academia."
+      },
+      "mentoring": {
+        "title": "Mentoria e apoio ao estudo",
+        "text": "Programa de apadrinhamento entre anos, sessões de estudo antes dos exames e partilha de materiais."
+      },
+      "social": {
+        "title": "Convívios e desporto",
+        "text": "Jantares de curso, torneios e saídas — porque o espírito de grupo também se constrói fora das aulas."
+      }
+    }
+  },
+  "resources": {
+    "eyebrow": "Recursos",
+    "title": "Tudo o que precisas, num só sítio",
+    "intro": "Uma seleção de ligações úteis para o teu percurso académico e profissional.",
+    "items": {
+      "course": {
+        "title": "Plano de estudos",
+        "text": "Unidades curriculares, objetivos e saídas profissionais da licenciatura."
+      },
+      "ualg": {
+        "title": "Universidade do Algarve",
+        "text": "Portal oficial da UAlg: serviços académicos, calendário escolar e notícias."
+      },
+      "aaualg": {
+        "title": "AAUAlg",
+        "text": "A Associação Académica que representa todos os estudantes da UAlg."
+      },
+      "pubmed": {
+        "title": "PubMed",
+        "text": "Base de dados de referência para literatura biomédica e ciências da vida."
+      },
+      "bon": {
+        "title": "b-on",
+        "text": "Biblioteca do Conhecimento Online: acesso a revistas científicas com o teu e-mail da UAlg."
+      },
+      "oe": {
+        "title": "Ordem dos Engenheiros",
+        "text": "Informação sobre a profissão, estágios e o percurso para te tornares engenheiro."
+      }
+    }
+  },
+  "join": {
+    "eyebrow": "Junta-te a nós",
+    "title": "Faz parte do NEBe",
+    "text": "Estudas Bioengenharia na UAlg? O núcleo é teu! Podes participar nas atividades, propor ideias ou integrar a equipa e ajudar a organizar os próximos eventos.",
+    "benefits": {
+      "events": "Acesso prioritário a workshops e visitas",
+      "network": "Contacto com investigadores e empresas",
+      "skills": "Experiência em organização de eventos e trabalho em equipa",
+      "community": "Uma comunidade que te apoia durante todo o curso"
+    },
+    "ctaEmail": "Envia-nos um e-mail",
+    "ctaInstagram": "Segue-nos no Instagram",
+    "contactTitle": "Contactos",
+    "emailLabel": "E-mail",
+    "addressLabel": "Morada",
+    "address": "AAUAlg · Campus de Gambelas, 8005-139 Faro",
+    "socialLabel": "Redes sociais"
+  },
+  "footer": {
+    "description": "Núcleo de Estudantes de Bioengenharia da Associação Académica da Universidade do Algarve.",
+    "sections": "Secções",
+    "follow": "Segue-nos",
+    "rights": "Todos os direitos reservados.",
+    "made": "Feito com ciência e café no Algarve.",
+    "backToTop": "Voltar ao topo"
+  },
+  "marquee": "Áreas da Bioengenharia"
+}
