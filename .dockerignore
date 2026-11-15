@@ -1,9 +1,13 @@
 .git
 .github
+.husky
 .next
 out
 node_modules
 docs
+e2e
+test-results
+playwright-report
 .env
 .env.*
 !.env.example

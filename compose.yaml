@@ -8,5 +8,13 @@ services:
     image: nebe-website
     container_name: nebe-website
     ports:
-      - "${PORT:-8080}:80"
+      - "${PORT:-8080}:8080"
     restart: unless-stopped
+    # Endurecimento: sistema de ficheiros só de leitura e sem privilégios extra.
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
