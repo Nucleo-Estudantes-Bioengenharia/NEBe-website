@@ -33,15 +33,15 @@ O núcleo tem quatro objetivos:
 | Início         | `#inicio`     | Mensagem principal e diagrama das áreas da Bioengenharia |
 | Sobre nós      | `#sobre`      | Quem somos, o que nos move e dados da licenciatura       |
 | Atividades     | `#atividades` | Tipos de iniciativas organizadas pelo núcleo             |
-| Agenda         | `#agenda`     | Próximos eventos                                         |
 | Recursos       | `#recursos`   | Ligações úteis (plano de estudos, UAlg, PubMed, b-on…)   |
 | Junta-te a nós | `#junta-te`   | Como participar e contactos                              |
 
 Funcionalidades:
 
-- **Responsivo**, de telemóveis a ecrãs grandes (no telemóvel, o diagrama radial passa a uma grelha);
-- **Modo claro e modo escuro**: segue o sistema por defeito e guarda a escolha do visitante;
-- **Português e inglês** com [i18next](https://www.i18next.com/). **Português é a língua por defeito**, e a escolha do visitante fica guardada no browser;
+- **Responsivo**, de telemóveis (320 px) a ecrãs grandes. No telemóvel o diagrama mostra só os ícones e uma legenda com a área ativa;
+- **Animações** com [Motion](https://motion.dev/): o conteúdo aparece ao fazer scroll, há uma barra de progresso, o diagrama é interativo, há uma faixa de áreas em movimento e os cartões reagem ao cursor. As animações são desativadas quando o sistema pede menos movimento (`prefers-reduced-motion`);
+- **Modo claro e modo escuro**: segue o sistema por defeito e guarda a escolha do visitante. A mudança é animada com um círculo que se expande a partir do botão (View Transitions API);
+- **Português e inglês** com [i18next](https://www.i18next.com/), num menu com bandeiras acessível por teclado. **Português é a língua por defeito**, e a escolha do visitante fica guardada no browser;
 - **Site estático**, exportado com `next build`, para alojamento gratuito no **GitHub Pages**.
 
 ### Tecnologias
@@ -50,8 +50,10 @@ Funcionalidades:
 - [Tailwind CSS 4](https://tailwindcss.com/)
 - [i18next](https://www.i18next.com/) / [react-i18next](https://react.i18next.com/) para as traduções
 - [next-themes](https://github.com/pacocoursey/next-themes) para o modo claro/escuro
+- [Motion](https://motion.dev/) para as animações
 - [lucide-react](https://lucide.dev/) para os ícones
-- ESLint + Prettier para garantir a qualidade do código
+- [Playwright](https://playwright.dev/) para os testes end-to-end
+- ESLint, Prettier, commitlint, husky e lint-staged para garantir a qualidade do código
 
 ### Estrutura
 
@@ -60,28 +62,29 @@ src/
 ├── app/                # layout, página única, estilos globais e favicon
 ├── assets/             # logótipo
 ├── components/         # uma componente por secção (Navbar, Hero, About, …)
-├── config/site.ts      # contactos, redes sociais, eventos, recursos e ícones
+├── config/site.ts      # contactos, redes sociais, áreas, atividades e recursos
 └── i18n/
     ├── index.ts        # configuração do i18next
     └── locales/        # pt.json (por defeito) e en.json
+e2e/                    # testes end-to-end (Playwright)
+nginx/                  # configuração do nginx usada na imagem Docker
 docs/                   # logótipo e esboço original do design
 ```
 
 ### Editar o conteúdo
 
 - **Textos**: em `src/i18n/locales/pt.json` e `src/i18n/locales/en.json`. As duas línguas têm de ter as mesmas chaves. O TypeScript dá erro se uma componente usar uma chave que não exista.
-- **Eventos da agenda**: adiciona a entrada em `events` em `src/config/site.ts` (data no formato `AAAA-MM-DD`). Depois acrescenta o título e o local em `agenda.events.<chave>` nos dois ficheiros de tradução.
 - **Contactos e redes sociais**: em `siteConfig`, em `src/config/site.ts`.
 
 > [!IMPORTANT]
-> O e-mail (`nebe.ualg@gmail.com`) e os links de Instagram e LinkedIn são **provisórios**. Também são exemplos os eventos da agenda. Confirma-os com a direção do núcleo antes de publicar.
+> O e-mail (`nebe.ualg@gmail.com`) e os links de Instagram e LinkedIn são **provisórios**. Confirma-os com a direção do núcleo antes de publicar.
 
 ## Desenvolvimento local
 
-Requisitos: **Node.js 22** e npm.
+Requisitos: **Node.js 22** (ver `.nvmrc`) e npm.
 
 ```bash
-npm install
+npm install          # também instala os hooks de Git (husky)
 npm run dev          # http://localhost:3000
 ```
 
@@ -119,7 +122,7 @@ O workflow define o `NEXT_PUBLIC_BASE_PATH` sozinho. Se configurares um domínio
 
 ### Opção 2 — Docker
 
-O `Dockerfile` gera o site estático e serve-o com nginx.
+O `Dockerfile` gera o site estático e serve-o com nginx. O contentor corre sem root (`nginx-unprivileged`), com o sistema de ficheiros só de leitura e cabeçalhos de segurança (CSP, `X-Frame-Options`, etc.), definidos em [`nginx/`](nginx/).
 
 ```bash
 cp .env.example .env     # opcional
@@ -132,19 +135,22 @@ O site fica disponível em <http://localhost:8080>. Para parar: `docker compose 
 
 O workflow [`.github/workflows/ci.yml`](.github/workflows/ci.yml) corre em todos os _pull requests_ e _pushes_ para `main`. Verifica:
 
-1. a formatação (Prettier);
-2. o linting (ESLint);
-3. os tipos (TypeScript);
-4. o build de produção.
+1. a formatação (Prettier), o linting (ESLint) e os tipos (TypeScript);
+2. as vulnerabilidades nas dependências (`npm audit`);
+3. se as mensagens de commit do PR seguem o Conventional Commits (commitlint);
+4. o build de produção e os testes end-to-end (Playwright, em desktop e telemóvel);
+5. o `Dockerfile` (hadolint) e o build da imagem Docker.
 
-Antes de fazeres _commit_, corre `npm run format && npm run lint`.
+O [Dependabot](.github/dependabot.yml) abre todas as semanas PRs para atualizar as dependências npm, as GitHub Actions e as imagens Docker.
+
+Localmente, os hooks de Git (husky) formatam e validam os ficheiros alterados antes de cada _commit_ (lint-staged). Também rejeitam mensagens de commit fora do formato.
 
 ## Contribuir
 
 Os commits seguem a especificação [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
 
 ```
-feat(agenda): adicionar jornadas de 2027
+feat(atividades): adicionar hackathon de bioinformática
 fix(navbar): corrigir scroll no telemóvel
 docs: atualizar contactos no README
 ```
