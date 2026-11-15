@@ -1,14 +1,14 @@
 # syntax=docker/dockerfile:1
 
 # ---- Dependências ----
-FROM node:22.22-alpine AS deps
+FROM node:26.13-alpine AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 # --ignore-scripts: não corre scripts de instalação de terceiros (nem o husky).
 RUN --mount=type=cache,target=/root/.npm npm ci --ignore-scripts
 
 # ---- Build: gera o site estático em /app/out ----
-FROM node:22.22-alpine AS build
+FROM node:26.13-alpine AS build
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
