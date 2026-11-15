@@ -45,7 +45,6 @@ export const siteConfig = {
 export const navSections = [
   { id: "sobre", key: "about" },
   { id: "atividades", key: "activities" },
-  { id: "agenda", key: "agenda" },
   { id: "recursos", key: "resources" },
 ] as const;
 
@@ -95,21 +94,6 @@ export const activities = [
   { key: "conference", icon: GraduationCap },
   { key: "mentoring", icon: BookOpen },
   { key: "social", icon: PartyPopper },
-] as const;
-
-/** Eventos da agenda. Datas no formato ISO (AAAA-MM-DD). */
-export const events = [
-  { key: "printing", type: "workshop", start: "2026-11-26", time: "14:00" },
-  { key: "christmas", type: "social", start: "2026-12-10", time: "20:00" },
-  { key: "exams", type: "study", start: "2027-01-09", time: "10:00" },
-  { key: "careers", type: "talk", start: "2027-02-18", time: "17:30" },
-  {
-    key: "jornadas",
-    type: "conference",
-    start: "2027-03-11",
-    end: "2027-03-12",
-  },
-  { key: "visit", type: "visit", start: "2027-04-15", time: "09:00" },
 ] as const;
 
 export const resources = [
