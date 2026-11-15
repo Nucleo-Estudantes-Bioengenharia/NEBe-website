@@ -29,7 +29,7 @@
     "university": "Universidade do Algarve"
   },
   "hero": {
-    "line1": "A vida inspira e",
+    "line1": "A vida inspira,",
     "line2": "a engenharia",
     "line3": "transforma.",
     "subtitle": "Ligamos pessoas, ideias e ciência para criar o que vem a seguir!",
@@ -37,7 +37,6 @@
     "ctaSecondary": "Conhece o núcleo",
     "tagline": "Do Algarve para o futuro",
     "diagramTitle": "Áreas da Bioengenharia",
-    "badge": "Núcleo da AAUAlg",
     "scroll": "Descer para conhecer o núcleo",
     "tapHint": "Toca num ícone para explorar as áreas"
   },

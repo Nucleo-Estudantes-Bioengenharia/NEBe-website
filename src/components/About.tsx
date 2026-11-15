@@ -89,7 +89,7 @@ export function About() {
                     <p className="font-semibold text-ink">
                       {t(`about.pillars.${key}.title`)}
                     </p>
-                    <p className="mt-1 text-sm text-muted">
+                    <p className="mt-1 text-sm text-pretty text-muted">
                       {t(`about.pillars.${key}.text`)}
                     </p>
                   </div>
@@ -143,7 +143,7 @@ export function About() {
                   </motion.div>
                 ))}
               </dl>
-              <p className="mt-6 text-sm leading-relaxed text-white/85">
+              <p className="mt-6 text-sm leading-relaxed text-pretty text-white/85">
                 {t("about.course.note")}
               </p>
               <ExternalLink

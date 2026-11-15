@@ -44,7 +44,7 @@ export function Resources() {
                       aria-hidden
                     />
                   </span>
-                  <span className="mt-1 block text-sm leading-relaxed text-muted">
+                  <span className="mt-1 block text-sm leading-relaxed text-pretty text-muted">
                     {t(`resources.items.${key}.text`)}
                   </span>
                 </span>

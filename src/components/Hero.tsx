@@ -51,26 +51,13 @@ export function Hero() {
       </div>
 
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pt-28 pb-10 sm:px-6 sm:pt-32 lg:px-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] xl:gap-6 xl:pt-36 xl:pb-16">
-        <div className="mx-auto max-w-2xl text-center xl:mx-0 xl:text-left">
-          <motion.p
-            initial="hidden"
-            animate="show"
-            custom={0}
-            variants={fade}
-            className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-surface/70 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary uppercase shadow-sm backdrop-blur sm:text-sm"
-          >
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-mint opacity-75" />
-              <span className="relative inline-flex size-2 rounded-full bg-mint" />
-            </span>
-            {t("hero.badge")}
-          </motion.p>
-
-          <h1 className="mt-6 text-[clamp(2.4rem,10vw,4.5rem)] leading-[1.08] font-bold tracking-tight text-ink xl:text-[clamp(3.25rem,4.4vw,4.75rem)]">
+        {/* @container: o título usa unidades cqw para caber sempre na largura do bloco. */}
+        <div className="@container mx-auto w-full max-w-2xl text-center xl:mx-0 xl:text-left">
+          <h1 className="text-[clamp(2rem,12cqw,4.75rem)] leading-[1.08] font-bold tracking-tight text-ink">
             {lines.map(({ text, className }, i) => (
               <span key={i} className="block overflow-hidden">
                 <motion.span
-                  className={`block ${className}`}
+                  className={`block whitespace-nowrap ${className}`}
                   initial="hidden"
                   animate="show"
                   custom={i}
@@ -87,7 +74,7 @@ export function Hero() {
             animate="show"
             custom={0.6}
             variants={fade}
-            className="mx-auto mt-6 max-w-md text-lg font-light text-ink/90 sm:text-xl xl:mx-0"
+            className="mx-auto mt-6 max-w-md text-lg font-light text-balance text-ink/90 sm:text-xl xl:mx-0"
           >
             {t("hero.subtitle")}
           </motion.p>

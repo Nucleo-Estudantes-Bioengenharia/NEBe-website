@@ -46,7 +46,7 @@ export function Activities() {
                 <h3 className="relative mt-6 text-xl font-semibold text-ink">
                   {t(`activities.items.${key}.title`)}
                 </h3>
-                <p className="relative mt-2 leading-relaxed text-muted">
+                <p className="relative mt-2 leading-relaxed text-pretty text-muted">
                   {t(`activities.items.${key}.text`)}
                 </p>
                 <span
