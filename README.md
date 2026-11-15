@@ -76,7 +76,6 @@ docs/                   # logótipo e esboço original do design
 - **Textos**: em `src/i18n/locales/pt.json` e `src/i18n/locales/en.json`. As duas línguas têm de ter as mesmas chaves. O TypeScript dá erro se uma componente usar uma chave que não exista.
 - **Contactos e redes sociais**: em `siteConfig`, em `src/config/site.ts`.
 
-
 ## Desenvolvimento local
 
 Requisitos: **Node.js 22** (ver `.nvmrc`) e npm.
