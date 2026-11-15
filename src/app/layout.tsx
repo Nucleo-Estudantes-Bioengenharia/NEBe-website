@@ -15,7 +15,7 @@ const lexend = Lexend({
 
 const title = "NEBe · Núcleo de Estudantes de Bioengenharia da UAlg";
 const description =
-  "Núcleo de Estudantes de Bioengenharia da Universidade do Algarve. A vida inspira e a engenharia transforma.";
+  "Núcleo de Estudantes de Bioengenharia da Universidade do Algarve. A vida inspira, a engenharia transforma.";
 
 export const metadata: Metadata = {
   // Só a origem: o Next.js já acrescenta o basePath aos URLs das imagens.

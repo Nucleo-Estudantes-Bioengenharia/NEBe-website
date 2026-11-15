@@ -6,7 +6,7 @@
 
 <p align="center">
   Site oficial do <strong>Núcleo de Estudantes de Bioengenharia</strong> da Universidade do Algarve.<br>
-  <em>A vida inspira e a engenharia transforma.</em>
+  <em>A vida inspira, a engenharia transforma.</em>
 </p>
 
 ---
