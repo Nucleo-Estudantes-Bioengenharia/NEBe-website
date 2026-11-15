@@ -42,7 +42,10 @@ export function Footer() {
             {t("footer.description")}
           </p>
         </div>
-        <nav aria-label={t("footer.sections")}>
+        <nav
+          aria-label={t("footer.sections")}
+          className="text-center sm:text-left"
+        >
           <p className="font-semibold text-ink">{t("footer.sections")}</p>
           <ul className="mt-4 space-y-2.5 text-sm">
             {navSections.map(({ id, key }) => (
@@ -59,7 +62,7 @@ export function Footer() {
             </li>
           </ul>
         </nav>
-        <div>
+        <div className="text-center sm:text-left">
           <p className="font-semibold text-ink">{t("footer.follow")}</p>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li>
