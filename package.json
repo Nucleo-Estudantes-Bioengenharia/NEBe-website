@@ -2,15 +2,20 @@
   "name": "nebe-website",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "npx serve@14 out",
+    "start": "serve out",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "next typegen && tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit",
+    "test:e2e": "playwright test",
+    "prepare": "husky"
   },
   "dependencies": {
     "i18next": "^27.1.2",
@@ -22,6 +27,9 @@
     "react-i18next": "^18.0.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
+    "@playwright/test": "1.64.1",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -29,9 +37,27 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
     "eslint-config-prettier": "^10.1.8",
+    "husky": "9.1.7",
+    "lint-staged": "17.6.0",
     "prettier": "^3.10.1",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "serve": "14.2.6",
     "tailwindcss": "4.3.3",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.1"
+    },
+    "serve": {
+      "compression": "^1.8.2"
+    }
+  },
+  "lint-staged": {
+    "*.{js,mjs,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md,yml,yaml}": "prettier --write"
   }
 }
