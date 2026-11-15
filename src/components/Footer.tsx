@@ -8,6 +8,7 @@ import { joinSectionId, navSections, siteConfig } from "@/config/site";
 
 import { Logo } from "./Logo";
 import { InstagramIcon, LinkedinIcon } from "./SocialIcons";
+import { ExternalLink } from "./ExternalLink";
 
 const noopSubscribe = () => () => {};
 
@@ -57,24 +58,20 @@ export function Footer() {
           <p className="font-semibold text-ink">{t("footer.follow")}</p>
           <ul className="mt-4 space-y-2 text-sm">
             <li>
-              <a
+              <ExternalLink
                 href={siteConfig.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-muted hover:text-primary"
               >
                 <InstagramIcon className="size-4" aria-hidden /> Instagram
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a
+              <ExternalLink
                 href={siteConfig.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-muted hover:text-primary"
               >
                 <LinkedinIcon className="size-4" aria-hidden /> LinkedIn
-              </a>
+              </ExternalLink>
             </li>
           </ul>
         </div>

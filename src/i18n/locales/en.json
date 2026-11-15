@@ -2,6 +2,9 @@
   "meta": {
     "skip": "Skip to content"
   },
+  "common": {
+    "newTab": "(opens in a new tab)"
+  },
   "nav": {
     "about": "About us",
     "activities": "Activities",
@@ -165,7 +168,6 @@
     "eyebrow": "Resources",
     "title": "Everything you need, in one place",
     "intro": "A selection of useful links for your academic and professional path.",
-    "open": "Open",
     "items": {
       "course": {
         "title": "Curriculum",

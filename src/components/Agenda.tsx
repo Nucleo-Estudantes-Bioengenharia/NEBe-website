@@ -46,7 +46,7 @@ export function Agenda() {
               >
                 <time
                   dateTime={event.start}
-                  className="flex w-20 shrink-0 flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-primary to-accent py-3 text-white dark:text-[#061327]"
+                  className="flex w-20 shrink-0 flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-primary to-accent py-3 text-on-primary"
                 >
                   <span className="text-3xl leading-none font-bold">
                     {fmt(event.start, { day: "2-digit" })}

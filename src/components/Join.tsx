@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { joinSectionId, siteConfig } from "@/config/site";
 
 import { InstagramIcon, LinkedinIcon } from "./SocialIcons";
+import { ExternalLink } from "./ExternalLink";
 
 const benefits = ["events", "network", "skills", "community"] as const;
 
@@ -48,20 +49,18 @@ export function Join() {
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-white shadow-lg transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:outline-none dark:text-[#061327]"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-on-primary shadow-lg transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:outline-none"
                 >
                   <Mail className="size-5" aria-hidden />
                   {t("join.ctaEmail")}
                 </a>
-                <a
+                <ExternalLink
                   href={siteConfig.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-surface/80 px-6 py-3 font-medium text-ink transition-colors hover:border-primary focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
                 >
                   <InstagramIcon className="size-5" aria-hidden />
                   {t("join.ctaInstagram")}
-                </a>
+                </ExternalLink>
               </div>
             </div>
 
@@ -94,14 +93,12 @@ export function Join() {
                       {t("join.addressLabel")}
                     </dt>
                     <dd>
-                      <a
+                      <ExternalLink
                         href={siteConfig.mapsUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="font-medium text-ink underline-offset-4 hover:text-primary hover:underline"
                       >
                         {t("join.address")}
-                      </a>
+                      </ExternalLink>
                     </dd>
                   </div>
                 </div>
@@ -110,24 +107,20 @@ export function Join() {
                     {t("join.socialLabel")}
                   </dt>
                   <dd className="mt-2 flex gap-2">
-                    <a
+                    <ExternalLink
                       href={siteConfig.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       aria-label="Instagram"
-                      className="grid size-11 place-items-center rounded-full bg-pill text-primary transition-colors hover:bg-primary hover:text-white dark:hover:text-[#061327]"
+                      className="grid size-11 place-items-center rounded-full bg-pill text-primary transition-colors hover:bg-primary hover:text-on-primary"
                     >
                       <InstagramIcon className="size-5" aria-hidden />
-                    </a>
-                    <a
+                    </ExternalLink>
+                    <ExternalLink
                       href={siteConfig.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       aria-label="LinkedIn"
-                      className="grid size-11 place-items-center rounded-full bg-pill text-primary transition-colors hover:bg-primary hover:text-white dark:hover:text-[#061327]"
+                      className="grid size-11 place-items-center rounded-full bg-pill text-primary transition-colors hover:bg-primary hover:text-on-primary"
                     >
                       <LinkedinIcon className="size-5" aria-hidden />
-                    </a>
+                    </ExternalLink>
                   </dd>
                 </div>
               </dl>

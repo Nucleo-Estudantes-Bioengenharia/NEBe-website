@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import { pillars, siteConfig } from "@/config/site";
 
 import { SectionHeading } from "./SectionHeading";
+import { ExternalLink } from "./ExternalLink";
 
 export function About() {
   const { t } = useTranslation();
@@ -107,15 +108,13 @@ export function About() {
             <p className="mt-6 text-sm leading-relaxed text-white/85">
               {t("about.course.note")}
             </p>
-            <a
+            <ExternalLink
               href={siteConfig.courseUrl}
-              target="_blank"
-              rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-semibold text-primary transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent focus-visible:outline-none dark:text-[#0a47a8]"
             >
               {t("about.course.link")}
               <ArrowUpRight className="size-4" aria-hidden />
-            </a>
+            </ExternalLink>
           </div>
         </aside>
       </div>

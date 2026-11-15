@@ -28,7 +28,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={`#${joinSectionId}`}
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-white shadow-lg shadow-[rgb(10_71_168/0.25)] transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:outline-none dark:text-[#061327]"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-on-primary shadow-lg shadow-[rgb(10_71_168/0.25)] transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {t("hero.ctaPrimary")}
               <ArrowRight className="size-4" aria-hidden />

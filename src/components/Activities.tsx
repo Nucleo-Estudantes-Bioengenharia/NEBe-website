@@ -34,7 +34,7 @@ export function Activities() {
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="relative grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-mint to-accent text-white shadow-md dark:text-[#061327]">
+              <span className="relative grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-mint to-accent text-on-primary shadow-md">
                 <Icon className="size-6" aria-hidden />
               </span>
               <h3 className="relative mt-6 text-xl font-semibold text-ink">

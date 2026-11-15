@@ -2,6 +2,9 @@
   "meta": {
     "skip": "Saltar para o conteúdo"
   },
+  "common": {
+    "newTab": "(abre num novo separador)"
+  },
   "nav": {
     "about": "Sobre nós",
     "activities": "Atividades",
@@ -165,7 +168,6 @@
     "eyebrow": "Recursos",
     "title": "Tudo o que precisas, num só sítio",
     "intro": "Uma seleção de ligações úteis para o teu percurso académico e profissional.",
-    "open": "Abrir",
     "items": {
       "course": {
         "title": "Plano de estudos",

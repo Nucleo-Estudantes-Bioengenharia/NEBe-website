@@ -122,7 +122,7 @@ export function BioDiagram() {
                 strokeWidth={1.75}
               />
             </div>
-            <span className="rounded-full bg-primary px-[2cqw] py-[0.6cqw] text-[2.4cqw] font-semibold text-white dark:text-[#061327]">
+            <span className="rounded-full bg-primary px-[2cqw] py-[0.6cqw] text-[2.4cqw] font-semibold text-on-primary">
               {t("areas.center")}
             </span>
           </div>
@@ -137,7 +137,7 @@ export function BioDiagram() {
                 className="group absolute"
                 style={{ left: `${left}%`, top: `${top}%` }}
               >
-                <span className="absolute grid size-[10cqw] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-2 border-primary bg-surface text-primary shadow-md transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white dark:group-hover:text-[#061327]">
+                <span className="absolute grid size-[10cqw] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-2 border-primary bg-surface text-primary shadow-md transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-on-primary">
                   <Icon
                     className="size-[5cqw]"
                     strokeWidth={1.75}
@@ -158,7 +158,7 @@ export function BioDiagram() {
 
       {/* Versão compacta (telemóvel) */}
       <div className="sm:hidden">
-        <div className="mx-auto mb-5 flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-5 py-2.5 font-semibold text-white shadow-lg dark:text-[#061327]">
+        <div className="mx-auto mb-5 flex w-fit items-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-5 py-2.5 font-semibold text-on-primary shadow-lg">
           <Dna className="size-5" aria-hidden />
           {t("areas.center")}
         </div>

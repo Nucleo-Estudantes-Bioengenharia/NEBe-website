@@ -104,7 +104,7 @@ export function Navbar() {
           <ThemeToggle />
           <a
             href={`#${joinSectionId}`}
-            className="ml-2 hidden rounded-full bg-pill px-6 py-3 font-medium text-ink transition-colors hover:bg-primary hover:text-white focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none md:inline-flex dark:hover:text-[#061327]"
+            className="ml-2 hidden rounded-full bg-pill px-6 py-3 font-medium text-ink transition-colors hover:bg-primary hover:text-on-primary focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none md:inline-flex"
           >
             {t("nav.join")}
           </a>
@@ -148,7 +148,7 @@ export function Navbar() {
         <a
           href={`#${joinSectionId}`}
           onClick={close}
-          className="mt-4 flex justify-center rounded-full bg-primary px-6 py-3 font-semibold text-white dark:text-[#061327]"
+          className="mt-4 flex justify-center rounded-full bg-primary px-6 py-3 font-semibold text-on-primary"
         >
           {t("nav.join")}
         </a>

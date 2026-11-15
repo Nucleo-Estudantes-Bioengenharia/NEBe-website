@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { resources } from "@/config/site";
 
 import { SectionHeading } from "./SectionHeading";
+import { ExternalLink } from "./ExternalLink";
 
 export function Resources() {
   const { t } = useTranslation();
@@ -26,10 +27,8 @@ export function Resources() {
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {resources.map(({ key, icon: Icon, href }) => (
             <li key={key}>
-              <a
+              <ExternalLink
                 href={href}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group flex h-full gap-4 rounded-3xl border border-line bg-surface p-6 transition-all hover:border-accent hover:shadow-lg focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
               >
                 <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-pill text-primary">
@@ -40,14 +39,14 @@ export function Resources() {
                     {t(`resources.items.${key}.title`)}
                     <ArrowUpRight
                       className="size-5 shrink-0 text-muted transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
-                      aria-label={t("resources.open")}
+                      aria-hidden
                     />
                   </span>
                   <span className="mt-1 block text-sm leading-relaxed text-muted">
                     {t(`resources.items.${key}.text`)}
                   </span>
                 </span>
-              </a>
+              </ExternalLink>
             </li>
           ))}
         </ul>
